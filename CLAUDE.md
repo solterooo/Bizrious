@@ -2,12 +2,14 @@
 
 ## Qué es este proyecto
 
-Pipeline Python que genera YouTube Shorts de temática **Business Facts** en inglés.
-Cada Short se produce de principio a fin sin intervención manual salvo la aprobación del guión.
+Dos pipelines Python para crear contenido de YouTube sobre **Business Facts** en inglés:
+
+- **YouTube Shorts** (`youtube_shorts.py`) — Shorts de 45-60 segundos, totalmente automático
+- **YouTube Videos** (`youtube_videos.py`) — Documentales de 10-30 minutos, genera el kit de producción
 
 ---
 
-## Estructura obligatoria del guión (4 bloques)
+## YouTube Shorts — Estructura del guión (4 bloques)
 
 ```
 0–3s   → HOOK:        dato impactante o pregunta (nunca empieza con fecha)
@@ -48,20 +50,18 @@ Cada Short se produce de principio a fin sin intervención manual salvo la aprob
 | Hacer un borrador rápido del script | `marketing:draft-content` |
 | Ejecutar el pipeline desde Claude | `run` |
 | Confirmar que el video final es correcto | `verify` |
-| Revisar cambios a pipeline.py antes de pushear | `code-review` |
+| Revisar cambios a youtube_shorts.py antes de pushear | `code-review` |
 
 ---
 
-## Flujo de trabajo por sesión
+## Flujo de trabajo — YouTube Shorts
 
 1. **Tú propones un tema** con keywords estéticos para Pexels
 2. **Claude genera el guión** directo a 45-50 segundos con la estructura de 4 bloques
 3. **Tú apruebas o ajustas** el guión
 4. **Se ejecuta el pipeline** — todo lo demás es automático
 
----
-
-## Variables a cambiar en cada Short (pipeline.py)
+### Variables a cambiar en cada Short (youtube_shorts.py)
 
 ```python
 SHORT_NUMBER    = 17          # número del short
@@ -70,7 +70,27 @@ USER_KEYWORDS   = [...]       # keywords estéticos de Pexels (hasta 7)
 BRAND_NAME      = "Nike"      # nombre de marca, o "" si no hay
 ```
 
-Ejecutar con: `python3 pipeline.py`
+Ejecutar con: `python3 youtube_shorts.py`
+
+---
+
+## Flujo de trabajo — YouTube Videos
+
+1. **Tú propones un tema** para el documental
+2. **Claude investiga** el tema con `deep-research`
+3. **Se ejecuta el pipeline** — genera el kit completo como `.md`
+4. **Tú produces el video** con Meta AI + Google Flow + ElevenLabs + Clipchamp
+
+### Variables a cambiar en cada video (youtube_videos.py)
+
+```python
+TOPIC          = "How Kodak Invented and Buried the Digital Camera"
+DURATION_RANGE = "15-20"   # minutos
+```
+
+Ejecutar con: `python3 youtube_videos.py`
+
+El kit se guarda en `method_b/outputs/YYYY-MM-DD-<slug>.md`
 
 ---
 
@@ -78,7 +98,7 @@ Ejecutar con: `python3 pipeline.py`
 
 - `ANTHROPIC_API_KEY` — Claude `claude-sonnet-4-5-20250929`
 - `ELEVENLABS_API_KEY` — TTS `eleven_multilingual_v2`, Voice ID `WTUK291rZZ9CLPCiFTfh`
-- `PEXELS_API_KEY` — clips de video
+- `PEXELS_API_KEY` — clips de video (solo Shorts)
 
 ## Dependencias
 
