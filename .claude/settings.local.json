@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pip install *)",
+      "Skill(run)",
+      "Skill(run:*)",
+      "Bash(pip3 install *)",
+      "Bash(brew install *)",
+      "Bash(python3 -c \"import imageio_ffmpeg; print\\(imageio_ffmpeg.get_ffmpeg_exe\\(\\)\\)\")",
+      "Bash(git --version)",
+      "Bash(git init *)",
+      "Bash(git add *)"
+    ]
+  }
+}
