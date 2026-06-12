@@ -3,6 +3,8 @@
 
 # Outputs generados — son pesados y se regeneran
 outputs/
+!method_b/outputs/
+!method_b/outputs/.gitkeep
 
 # Python cache
 __pycache__/
