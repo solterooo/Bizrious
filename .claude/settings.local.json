@@ -9,7 +9,24 @@
       "Bash(python3 -c \"import imageio_ffmpeg; print\\(imageio_ffmpeg.get_ffmpeg_exe\\(\\)\\)\")",
       "Bash(git --version)",
       "Bash(git init *)",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(git remote *)",
+      "Bash(git push *)",
+      "mcp__mcp-registry__search_mcp_registry",
+      "Bash(git -C /Users/soltero/Desktop/Bizrious status)",
+      "Bash(git -C /Users/soltero/Desktop/Bizrious log --oneline -5)",
+      "Bash(git -C /Users/soltero/Desktop/Bizrious status -u)",
+      "Bash(git -C /Users/soltero/Desktop/Bizrious diff HEAD -- pipeline.py)",
+      "Bash(ls \"/Users/soltero/Library/Application Support/Claude/local-agent-mode-sessions/skills-plugin/3a1bf247-c3d7-423b-81d8-0c228f72a1f5/667af411-5990-402c-83cb-7b7b1d949a79/skills/setup-cowork/\")",
+      "mcp__mcp-registry__list_connectors",
+      "Bash(gh repo *)",
+      "Bash(curl -s https://raw.githubusercontent.com/obra/superpowers/main/README.md)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(cat /tmp/superpowers/README.md | grep -A 30 -i \"claude code\\\\|install\\\\|manual\" | head -80)",
+      "Bash(npm --version)",
+      "Bash(brew --version)",
+      "Skill(superpowers:*)"
     ]
   }
 }
