@@ -1,0 +1,17 @@
+# API keys — nunca subir
+.env
+
+# Outputs generados — son pesados y se regeneran
+outputs/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# macOS
+.DS_Store
+
+# Assets grandes
+assets/logos/*.png
+assets/logos/*.jpg
