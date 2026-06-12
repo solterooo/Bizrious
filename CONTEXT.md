@@ -35,9 +35,9 @@ Pipeline 100% automatizado en Python que genera YouTube Shorts de temática **Bu
 
 ---
 
-## El pipeline — pipeline.py
+## El pipeline — youtube_shorts.py
 
-**Ubicación:** `/Users/soltero/Desktop/Bizrious/pipeline.py`
+**Ubicación:** `/Users/soltero/Desktop/Bizrious/youtube_shorts.py`
 
 ### Variables que cambias en cada Short
 
@@ -127,9 +127,9 @@ PEXELS_API_KEY=...
 
 ## Cómo arrancar el Short 17 en una nueva sesión
 
-1. Abre `/Users/soltero/Desktop/Bizrious/pipeline.py`
+1. Abre `/Users/soltero/Desktop/Bizrious/youtube_shorts.py`
 2. Cambia `SHORT_NUMBER`, `APPROVED_SCRIPT`, `USER_KEYWORDS` y `BRAND_NAME`
-3. Ejecuta: `python3 pipeline.py`
+3. Ejecuta: `python3 youtube_shorts.py`
 
 El pipeline se detiene automáticamente tras el guión y pide confirmación antes de continuar — aunque con los scripts aprobados directamente en `APPROVED_SCRIPT` ya no usa esa pausa.
 
